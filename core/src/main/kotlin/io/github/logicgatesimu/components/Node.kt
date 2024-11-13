@@ -1,21 +1,31 @@
 package io.github.logicgatesimu.components
 
+import com.badlogic.gdx.math.Vector2
 
-class Node(private var signal: Boolean = false, var next: Node? = null) {
 
-    fun getSignal(): Boolean {
-        return signal
-    }
+class Node(
+    signal: Boolean = false,
+    next: Node? = null,
+    position: Vector2
+) {
 
-    fun setSignal(state: Boolean) {
-        signal = state
-    }
+    var mSignal = signal
+        get() = field
+        set(value) {
+            field = value
+        }
+
+    var mNext = next
+        get() = field
+        set(value) {
+            field = value
+        }
 
     override fun toString(): String {
-        return if (next != null) {
-            "$signal -> ${next.toString()}"
+        return if (mNext != null) {
+            "$mSignal -> ${mNext.toString()}"
         } else {
-            "$signal"
+            "$mSignal"
         }
     }
 }
