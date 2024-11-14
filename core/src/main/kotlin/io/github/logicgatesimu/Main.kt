@@ -11,4 +11,9 @@ class Main : Game(){
         setScreen(logicGateScreen)
     }
 
+    companion object{
+        const val WORLD_WIDTH = 1280f
+        const val WORLD_HEIGHT = 720f
+    }
+
 }

@@ -1,6 +1,7 @@
 package io.github.logicgatesimu.components
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 
 abstract class Component(
     id: Int,
@@ -17,6 +18,6 @@ abstract class Component(
     abstract fun evaluate()
 
     abstract fun draw(batch: SpriteBatch)
-
+    abstract fun draw(shape: ShapeRenderer)
 
 }

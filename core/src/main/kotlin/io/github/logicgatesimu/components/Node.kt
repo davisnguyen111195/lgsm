@@ -9,6 +9,11 @@ class Node(
     position: Vector2
 ) {
 
+    var mPosition : Vector2 = position
+        get() = field
+        set(value) {
+            field = value
+        }
     var mSignal = signal
         get() = field
         set(value) {

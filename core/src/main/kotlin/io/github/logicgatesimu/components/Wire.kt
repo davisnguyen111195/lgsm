@@ -1,6 +1,7 @@
 package io.github.logicgatesimu.components
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 
 //
 class Wire(
@@ -23,6 +24,11 @@ class Wire(
     }
 
     override fun draw(batch: SpriteBatch) {
+
+    }
+
+    override fun draw(shape: ShapeRenderer) {
+
     }
 
 }
