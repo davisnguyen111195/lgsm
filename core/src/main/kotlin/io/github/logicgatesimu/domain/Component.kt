@@ -1,4 +1,4 @@
-package io.github.logicgatesimu.components
+package io.github.logicgatesimu.domain
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer

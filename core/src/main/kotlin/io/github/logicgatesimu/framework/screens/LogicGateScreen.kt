@@ -1,4 +1,4 @@
-package io.github.logicgatesimu.screens
+package io.github.logicgatesimu.framework.screens
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Screen

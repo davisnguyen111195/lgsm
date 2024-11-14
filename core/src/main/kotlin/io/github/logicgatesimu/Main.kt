@@ -1,7 +1,7 @@
 package io.github.logicgatesimu
 
 import com.badlogic.gdx.Game
-import io.github.logicgatesimu.screens.LogicGateScreen
+import io.github.logicgatesimu.framework.screens.LogicGateScreen
 
 /** [com.badlogic.gdx.ApplicationListener] implementation shared by all platforms. */
 class Main : Game(){

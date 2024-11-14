@@ -1,4 +1,4 @@
-package io.github.logicgatesimu.components
+package io.github.logicgatesimu.domain
 
 import com.badlogic.gdx.math.Vector2
 
