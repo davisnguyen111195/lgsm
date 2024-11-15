@@ -51,14 +51,14 @@ class Main : ApplicationAdapter() {
         engine.addEntity(createEntities())
         engine.addSystem(DeleteEntitySystem())
         engine.addSystem(MovementSystem())
-        engine.addSystem(RenderSystem(shapeRenderer))
+
         val touchComponent = TouchComponent(Vector2(0f, 0f))
         engine.addEntity(Entity().add(touchComponent))
         engine.addSystem(TouchSystem(viewport))
         engine.addSystem(RenderBucketSystem(batch, textureBucket))
 
         engine.addSystem(SpawnSystem())
-
+        engine.addSystem(RenderSystem(shapeRenderer))
     }
 
     override fun resize(width: Int, height: Int) {
