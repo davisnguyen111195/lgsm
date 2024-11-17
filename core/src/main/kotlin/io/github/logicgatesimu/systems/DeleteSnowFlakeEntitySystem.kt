@@ -5,7 +5,7 @@ import com.badlogic.ashley.core.EntitySystem
 import com.badlogic.ashley.core.Family
 import io.github.logicgatesimu.components.MovementComponent
 
-class DeleteEntitySystem : EntitySystem() {
+class DeleteSnowFlakeEntitySystem : EntitySystem() {
 
     private val movementMapper = ComponentMapper.getFor(
         MovementComponent::class.java

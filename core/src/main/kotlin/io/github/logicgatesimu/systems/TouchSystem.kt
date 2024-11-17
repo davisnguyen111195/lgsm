@@ -6,12 +6,17 @@ import com.badlogic.ashley.core.Family
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.utils.viewport.StretchViewport
+import io.github.logicgatesimu.components.BoundingBoxComponent
+import io.github.logicgatesimu.components.BucketBoundingBoxComponent
 import io.github.logicgatesimu.components.TouchComponent
 
 class TouchSystem(val viewPort: StretchViewport) : EntitySystem() {
     private val touchMapper = ComponentMapper.getFor(
         TouchComponent::class.java
     )
+
+
+
 
     override fun update(deltaTime: Float) {
         super.update(deltaTime)
@@ -20,8 +25,11 @@ class TouchSystem(val viewPort: StretchViewport) : EntitySystem() {
             viewPort.unproject(vector2)
             engine.getEntitiesFor(Family.all(TouchComponent::class.java).get()).forEach {
                 val touch = touchMapper[it]
+
                 touch.position?.x = vector2.x
                 touch.position?.y = vector2.y
+
+
             }
         }
     }
