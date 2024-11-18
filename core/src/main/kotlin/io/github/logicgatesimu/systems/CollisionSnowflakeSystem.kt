@@ -18,7 +18,11 @@ class CollisionSnowflakeSystem : EntitySystem() {
 
     override fun update(deltaTime: Float) {
         super.update(deltaTime)
-        val entitiesSnow = engine.getEntitiesFor(Family.all(BoundingBoxComponent::class.java).get())
+        val entitiesSnow = engine.getEntitiesFor(
+            Family.all(
+                BoundingBoxComponent::class.java
+            ).get()
+        )
         engine.getEntitiesFor(Family.all(BucketBoundingBoxComponent::class.java).get()).forEach {
             for (snow in entitiesSnow) {
                 if (bucketBoundingMapper[it].bucketBoundingBox.overlaps(boundingBoxMapper[snow].boundingBox)) {
